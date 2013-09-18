@@ -1,5 +1,4 @@
 Changes
-ignore.txt
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -17,7 +16,9 @@ Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
-README
+MYMETA.json
+MYMETA.yml
+README.pod
 t/00-load.t
 t/basic.t
 t/boilerplate.t
