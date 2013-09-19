@@ -16,11 +16,11 @@ Timed::Logger - store events for later analysis.
 
 =head1 VERSION
 
-Version 0.0.3
+Version 0.0.4
 
 =cut
 
-our $VERSION = '0.0.3';
+our $VERSION = '0.0.4';
 
 =head1 SYNOPSIS
 
@@ -119,10 +119,10 @@ sub finish {
 sub elapsed_total {
   my ($self, $bucket) = @_;
   if($bucket) {
-    return List::Util::sum(map { $_->elapsed } @{$self->log->{$bucket} || []})
+    return List::Util::sum(map { $_->elapsed } @{$self->log->{$bucket} || []}) || 0
   }
   else {
-    return List::Util::sum(map { $_->elapsed } map { @$_ } values(%{$self->log}));
+    return List::Util::sum(map { $_->elapsed } map { @$_ } values(%{$self->log})) || 0;
   }
 }
 

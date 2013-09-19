@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 16;
+use Test::More tests => 18;
 use Test::Easy qw(deep_ok nearly_ok);
 
 use_ok('Timed::Logger');
@@ -9,6 +9,8 @@ my $test_entry = new_ok('Timed::Logger::Entry', [bucket => 'test', started => '0
 my $logger = new_ok('Timed::Logger');
 
 deep_ok($logger->log, {}, 'got empty log by default');
+is($logger->elapsed_total, 0, 'got 0 for empty logger total');
+is($logger->elapsed_total('doesntexist'), 0, 'got 0 for empty logger total');
 
 my $first_time = 0 + time();
 {
