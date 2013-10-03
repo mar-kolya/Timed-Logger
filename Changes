@@ -1,11 +1,12 @@
 Revision history for Timed-Logger
 
-0.0.1   First version, released on an unsuspecting world.
+0.0.6 2013-10-03
+      - Packaging pleanup
 
-0.0.2   Readme file update
+0.0.5 2013-09-19
+      - Update git repo link
+      - Return 0 for totals if no events were logged
 
-0.0.3   Up version for cpan upload
-
-0.0.4   Return 0 for totals if no events were logged
-
-0.0.5   Update git repo link
+0.0.3 2013-09-19
+      - Up version for cpan upload
+      - Readme file update
